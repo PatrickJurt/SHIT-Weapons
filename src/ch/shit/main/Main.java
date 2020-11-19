@@ -7,5 +7,6 @@ public class Main extends JavaPlugin {
     @Override
     public void onEnable() {
         System.out.println("Der Test funktioniert.");
+        System.out.println("This is added.");
     }
 }

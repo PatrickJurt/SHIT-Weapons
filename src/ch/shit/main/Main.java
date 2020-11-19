@@ -8,5 +8,6 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         System.out.println("Der Test funktioniert.");
         System.out.println("This is added.");
+        System.out.println("This too");
     }
 }

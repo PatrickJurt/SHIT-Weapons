@@ -9,5 +9,6 @@ public class Main extends JavaPlugin {
         System.out.println("Der Test funktioniert.");
         System.out.println("Once more please.");
         System.out.println("And back again");
+        System.out.println("YESSS PLEASEEE!!!!!");
     }
 }

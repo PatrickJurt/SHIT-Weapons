@@ -9,5 +9,6 @@ public class Main extends JavaPlugin {
         System.out.println("Der Test funktioniert.");
         System.out.println("This is added.");
         System.out.println("This too");
+        System.out.println("This is now from my pc");
     }
 }

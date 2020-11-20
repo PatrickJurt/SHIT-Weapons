@@ -32,7 +32,7 @@ public class Main extends JavaPlugin {
 *
 *
 * -----------------------------------
-* Brainstorming Patrick
+* Brainstorming P
 * -----------------------------------
 * Maybe no mysql since we haven't got a db-server
 * Could be done in a file

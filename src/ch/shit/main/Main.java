@@ -13,6 +13,7 @@ public class Main extends JavaPlugin {
     }
     public void hello(){
         System.out.println("there is no hope");
+        System.out.println("shit");
     }
 }
 //hallo salli hoi

@@ -12,7 +12,7 @@ public class Main extends JavaPlugin {
         System.out.println("YESSS PLEASEEE!!!!!");
     }
     public void hello(){
-
+        //hallo du
     }
 }
 //hallo salli hoi

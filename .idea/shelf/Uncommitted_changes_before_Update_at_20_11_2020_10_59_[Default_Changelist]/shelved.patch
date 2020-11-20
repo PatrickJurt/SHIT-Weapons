@@ -1,0 +1,46 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"BRANCH:origin/main\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </select>\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"151ccb6f-8134-4756-ba14-f502d24bdf6e\" name=\"Default Changelist\" comment=\"CMON BABY\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1kXo8XtjKNCIXsYgp2UUwr5qMvn\" />\r\n  <component name=\"ProjectLevelVcsManager\">\r\n    <OptionsSetting value=\"false\" id=\"Update\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"last_opened_file_path\" value=\"$USER_HOME$/Java/spigot-1.16.4.jar\" />\r\n    <property name=\"project.structure.last.edited\" value=\"Libraries\" />\r\n    <property name=\"project.structure.proportion\" value=\"0.0\" />\r\n    <property name=\"project.structure.side.proportion\" value=\"0.0\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"preferences.general\" />\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"151ccb6f-8134-4756-ba14-f502d24bdf6e\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1605856138972</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1605856138972</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"388\" y=\"179\" key=\"FileChooserDialogImpl\" timestamp=\"1605856439972\">\r\n      <screen x=\"0\" y=\"0\" width=\"1368\" height=\"872\" />\r\n    </state>\r\n    <state x=\"388\" y=\"179\" key=\"FileChooserDialogImpl/0.0.1368.872@0.0.1368.872\" timestamp=\"1605856439972\" />\r\n    <state x=\"165\" y=\"11\" key=\"SettingsEditor\" timestamp=\"1605856444045\">\r\n      <screen x=\"0\" y=\"0\" width=\"1368\" height=\"872\" />\r\n    </state>\r\n    <state x=\"165\" y=\"11\" key=\"SettingsEditor/0.0.1368.872@0.0.1368.872\" timestamp=\"1605856444045\" />\r\n    <state x=\"502\" y=\"350\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2\" timestamp=\"1605856257117\">\r\n      <screen x=\"0\" y=\"0\" width=\"1368\" height=\"872\" />\r\n    </state>\r\n    <state x=\"502\" y=\"350\" key=\"com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1368.872@0.0.1368.872\" timestamp=\"1605856257117\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 72c809eae32ce1a3577d4484bd7830108ffa8571)
++++ .idea/workspace.xml	(date 1605866339806)
+@@ -62,6 +62,14 @@
+       <option name="presentableId" value="Default" />
+       <updated>1605856138972</updated>
+     </task>
++    <task id="LOCAL-00001" summary="Next try">
++      <created>1605865149870</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1605865149870</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -75,6 +83,10 @@
+       </map>
+     </option>
+     <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="Next try" />
++    <option name="LAST_COMMIT_MESSAGE" value="Next try" />
+   </component>
+   <component name="WindowStateProjectService">
+     <state x="388" y="179" key="FileChooserDialogImpl" timestamp="1605856439972">
+@@ -85,6 +97,10 @@
+       <screen x="0" y="0" width="1368" height="872" />
+     </state>
+     <state x="165" y="11" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1605856444045" />
++    <state x="277" y="156" key="Vcs.Push.Dialog.v2" timestamp="1605865210064">
++      <screen x="0" y="0" width="1368" height="872" />
++    </state>
++    <state x="277" y="156" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1605865210064" />
+     <state x="502" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605856257117">
+       <screen x="0" y="0" width="1368" height="872" />
+     </state>

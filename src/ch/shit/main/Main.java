@@ -11,6 +11,12 @@ public class Main extends JavaPlugin {
         System.out.println("And back again");
         System.out.println("YESSS PLEASEEE!!!!!");
     }
+
+
+
+    public static void shit(){
+
+    }
 }
 //hallo salli hoi
 //FUCK OYU

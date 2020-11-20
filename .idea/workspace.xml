@@ -26,7 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="151ccb6f-8134-4756-ba14-f502d24bdf6e" name="Default Changelist" comment="2nd comment">
+    <list default="true" id="151ccb6f-8134-4756-ba14-f502d24bdf6e" name="Default Changelist" comment="shit-method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +70,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605866391174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="shit-method">
+      <created>1605866549346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605866549346</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,7 +94,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2nd comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd comment" />
+    <MESSAGE value="shit-method" />
+    <option name="LAST_COMMIT_MESSAGE" value="shit-method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="388" y="179" key="FileChooserDialogImpl" timestamp="1605856439972">
@@ -97,10 +106,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="165" y="11" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1605856444045" />
-    <state x="277" y="156" key="Vcs.Push.Dialog.v2" timestamp="1605866393403">
+    <state x="277" y="156" key="Vcs.Push.Dialog.v2" timestamp="1605866553613">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="156" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1605866393403" />
+    <state x="277" y="156" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1605866553613" />
     <state x="502" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605856257117">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

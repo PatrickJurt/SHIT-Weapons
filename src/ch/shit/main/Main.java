@@ -13,3 +13,4 @@ public class Main extends JavaPlugin {
     }
 }
 //hallo salli hoi
+//FUCK OYU

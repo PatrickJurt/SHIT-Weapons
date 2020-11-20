@@ -16,17 +16,11 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </select>
+    <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="151ccb6f-8134-4756-ba14-f502d24bdf6e" name="Default Changelist" comment="2nd comment">
+    <list default="true" id="151ccb6f-8134-4756-ba14-f502d24bdf6e" name="Default Changelist" comment="Test Method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605866391174</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test Method">
+      <created>1605866897832</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605866897832</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,7 +87,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2nd comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="2nd comment" />
+    <MESSAGE value="Test Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test Method" />
   </component>
   <component name="WindowStateProjectService">
     <state x="388" y="179" key="FileChooserDialogImpl" timestamp="1605856439972">

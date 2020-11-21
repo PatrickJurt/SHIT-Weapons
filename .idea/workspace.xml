@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="SHIT-Weapons:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -24,7 +29,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Again">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Brainstorming P 1.0.2">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +42,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1kaqA9bmyzQkbQptmVJarE6Jh1t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
@@ -42,9 +50,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.1150748" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -57,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1605904571789</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Brainstorming P 1.0.2">
+      <created>1605908049551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605908049551</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Brainstorming P 1.0.2" />
+      <created>1605948904152</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1605948904152</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -74,16 +99,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Brainstorming P&#10;classes and attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Brainstorming P&#10;classes and attributes" />
+    <MESSAGE value="Brainstorming P 1.0.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Brainstorming P 1.0.2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605902761738" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605904618924">
+    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605949012380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605904618924" />
+    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605949012380" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1605964401201">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605964401201" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605908051140">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605908051140" />
   </component>
 </project>

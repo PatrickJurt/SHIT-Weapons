@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SHIT-Weapons:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SHIT_Weapons_jar</output-path>
+    <root id="archive" name="SHIT-Weapons.jar">
+      <element id="module-output" name="SHIT-Weapons" />
+      <element id="extracted-dir" path="$USER_HOME$/Java/spigot-1.16.4.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -2,6 +2,7 @@ package ch.shit.main;
 
 import ch.shit.listeners.PlayerInteractListener;
 import ch.shit.listeners.PlayerItemHeldListener;
+import ch.shit.listeners.ProjectileHitListener;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -16,6 +17,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         new PlayerInteractListener(this);
         new PlayerItemHeldListener(this);
+        new ProjectileHitListener(this);
 
         System.out.println("-----------------------------");
         System.out.println("S.H.I.T - Weapons enabled.");
@@ -57,6 +59,7 @@ public class Main extends JavaPlugin {
 * - velocity
 * - effects
 * - damage
+* - vector
 *
 * class ProjectileEffectEnum
 * - none
@@ -82,7 +85,11 @@ public class Main extends JavaPlugin {
 *    - type
 *    - zoom
 *
-* class PlayerClickEvent
+* class ProjectileHitListener
+* * onProjectileHit()
+*
+*
+* class PlayerClickListener
 *  * onPlayerRightClick()
 *  * onPlayerLeftClick()
 *

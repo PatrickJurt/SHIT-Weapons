@@ -1,11 +1,22 @@
 package ch.shit.main;
 
+import ch.shit.listeners.PlayerInteractListener;
+import ch.shit.listeners.PlayerItemHeldListener;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends JavaPlugin {
 
+    public static List<Player> zoomedPlayers = new ArrayList<>();
+
     @Override
     public void onEnable() {
+        new PlayerInteractListener(this);
+        new PlayerItemHeldListener(this);
+
         System.out.println("-----------------------------");
         System.out.println("S.H.I.T - Weapons enabled.");
         System.out.println("-----------------------------");

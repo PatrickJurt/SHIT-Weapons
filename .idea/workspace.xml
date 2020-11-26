@@ -24,39 +24,60 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Brainstorming P 1.0.2">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_20_04__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_20_04__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_10_59__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_10_59__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_11_31__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_11_31__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="SHIT-Weapons/invalid/Minecraft" />
+    </ignored-facets>
   </component>
   <component name="ProjectId" id="1kaqA9bmyzQkbQptmVJarE6Jh1t" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="false" id="Update" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$USER_HOME$/minecraft/localhost/plugins" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1150748" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -107,13 +128,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605902761738" />
+    <state x="448" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606377572095">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="448" y="238" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1606377572095" />
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605949012380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605949012380" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1605964401201">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="615" y="191" key="FileChooserDialogImpl" timestamp="1606383722255">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state x="615" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1606383722255" />
+    <state x="314" y="23" key="SettingsEditor" timestamp="1606382268520">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="314" y="23" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1606382268520" />
     <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605964401201" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605908051140">
       <screen x="0" y="0" width="1920" height="1040" />

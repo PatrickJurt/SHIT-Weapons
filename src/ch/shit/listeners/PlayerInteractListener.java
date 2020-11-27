@@ -1,6 +1,7 @@
 package ch.shit.listeners;
 
 import ch.shit.main.Main;
+import ch.shit.util.BulletUtil;
 import ch.shit.util.PlayerUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -13,6 +14,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.util.Vector;
 
 public class PlayerInteractListener implements Listener {
 
@@ -56,14 +58,17 @@ public class PlayerInteractListener implements Listener {
 
                 //If player has orange Dye in his hand
                 if(e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
-                    Location loc = p.getLocation();
 
                     //Adjust Projectile Position to be on eye-height.
+                    Location loc = p.getLocation();
                     loc.add(0, 1.6, 0);
+
+                    //Add spread to the direction-Vector
+                    Vector dir = BulletUtil.addSpread(p.getLocation().getDirection(), 0.1);
 
                     //Spawn arrow, set vector, velocity, shooter and add Metadata
                     Arrow arrow = p.getWorld().spawn(loc, Arrow.class);
-                    arrow.setVelocity(p.getLocation().getDirection().multiply(5));
+                    arrow.setVelocity(dir.multiply(5));
                     arrow.setShooter(p);
                     arrow.setMetadata("Bullet", new FixedMetadataValue(plugin, "yes!"));
 

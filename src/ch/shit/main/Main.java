@@ -17,7 +17,7 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         new PlayerInteractListener(this);
         new PlayerItemHeldListener(this);
-        new ProjectileHitListener(this);
+        //new ProjectileHitListener(this);
 
         System.out.println("-----------------------------");
         System.out.println("S.H.I.T - Weapons enabled.");

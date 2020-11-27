@@ -29,18 +29,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Zoom-Mode&#10;Player goes into zoom-Mode when rightclicking with orange dye in hand. Player leaves zoom-Mode when he switches from orange-dye to an other item-slot">
-      <change afterPath="$PROJECT_DIR$/src/ch/shit/util/BulletUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_20_04_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_19_11_2020_20_04__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_10_59_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_10_59__Default_Changelist_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_11_31_[Default_Changelist]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_20_11_2020_11_31__Default_Changelist_.xml" beforeDir="false" />
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Added Spread&#10;in BulletUtil">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/BulletUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/BulletUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +96,14 @@
       <option name="presentableId" value="Default" />
       <updated>1605948904152</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added Spread&#10;in BulletUtil">
+      <created>1606486682464</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606486682465</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,7 +121,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Brainstorming P&#10;classes and attributes" />
     <MESSAGE value="Brainstorming P 1.0.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Brainstorming P 1.0.2" />
+    <MESSAGE value="Added Spread&#10;in BulletUtil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Spread&#10;in BulletUtil" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
@@ -146,9 +146,10 @@
     </state>
     <state x="314" y="23" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1606460471160" />
     <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606415629469" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605908051140">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="393" y="212" key="Vcs.Push.Dialog.v2" timestamp="1606486685352">
+      <screen x="0" y="0" width="1368" height="872" />
     </state>
+    <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605908051140" />
   </component>
 </project>

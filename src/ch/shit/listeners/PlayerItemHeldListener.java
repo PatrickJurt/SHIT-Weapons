@@ -31,7 +31,7 @@ public class PlayerItemHeldListener implements Listener {
 
                 //If the player switches from orange dye to something else
                 //and he is in zoom-mode, toggle zoom-mode
-                if (Main.zoomedPlayers.contains(e.getPlayer())){
+                if (PlayerUtil.zoomedPlayers.contains(e.getPlayer())){
                     PlayerUtil.toggleZoom(e.getPlayer());
                 }
             }

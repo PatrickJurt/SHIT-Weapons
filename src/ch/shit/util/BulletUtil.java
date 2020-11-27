@@ -1,8 +1,17 @@
 package ch.shit.util;
 
+import ch.shit.main.Main;
 import org.bukkit.util.Vector;
 
 public class BulletUtil {
+
+
+    private static Main plugin;
+
+    public BulletUtil(Main plugin){
+        this.plugin = plugin;
+    }
+
 
     /*
     * Adds spread to a vector with max the length of spread.

@@ -55,6 +55,8 @@ public class PlayerInteractListener implements Listener {
                 if (p.getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
 
                     //If player has reloaded just before and Event is called from dropevent
+                    //If during a reload of the plugin players stay on the server and try to shoot without reloading
+                    //There will be an Error-message.
                     if (System.currentTimeMillis() - PlayerUtil.playerLastReload.get(p) > 100) {
 
                         //Cancel the block-braking or hitting.
@@ -70,10 +72,9 @@ public class PlayerInteractListener implements Listener {
 
                             //Remove 1 ammo from weapon
                             WeaponUtil.setAmmoInLore(weapon, ammo - 1);
-
-                            //Actionbar for ammodisplay
-                            WeaponUtil.makeActionbar(p, weapon, 10);
                         }
+                        //Actionbar for ammodisplay
+                        WeaponUtil.makeActionbar(p, weapon, 10);
                     }
                 }
             }

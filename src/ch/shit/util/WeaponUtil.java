@@ -8,8 +8,12 @@ import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.util.Vector;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class WeaponUtil {
 
@@ -29,8 +33,9 @@ public class WeaponUtil {
         //Add spread to the direction-Vector if player is in zoom-Mode
         if (PlayerUtil.zoomedPlayers.contains(p)) {
             dir = BulletUtil.addSpread(p.getLocation().getDirection(), 0.01);
+
+        //Add spread to the direction-Vector not in zoom-Mode.
         }else {
-            //Add spread to the direction-Vector
             dir = BulletUtil.addSpread(p.getLocation().getDirection(), 0.1);
         }
 
@@ -39,26 +44,28 @@ public class WeaponUtil {
         arrow.setVelocity(dir.multiply(5));
         arrow.setShooter(p);
         arrow.setMetadata("Bullet", new FixedMetadataValue(plugin, "yes!"));
+
     }
+
 
     public static void reloadWeapon(Player p, Item weapon){
 
+        int magazineSize = 10;
         Inventory inv = p.getInventory();
 
-        //If the player hasn't any ammo at all.
-        if (!(inv.contains(Material.ORANGE_TULIP, 1))){
-            p.sendMessage("No ammo in Inventory.");
+        //If the player has any ammo.
+        if (inv.contains(Material.ORANGE_TULIP, 1)){
+            //ammoCount = How much ammo has to be reloaded.
+            int ammoCount = magazineSize - getAmmoFromLore(weapon.getItemStack());
 
-        //If player has one magazine size or more ammo in his inventory.
-        }else if (inv.contains(Material.ORANGE_TULIP, 10)){
-            int ammoCount = 10;
-            for (ItemStack i : inv){
-                if (i != null && ammoCount != 0){
-                    if (i.getType() == Material.ORANGE_TULIP){
-                        if (i.getAmount() > ammoCount){
+            //For every ItemStack in Inventory remove in total magazineSize amount of ammo.
+            for (ItemStack i : inv) {
+                if (i != null && ammoCount != 0) {
+                    if (i.getType() == Material.ORANGE_TULIP) {
+                        if (i.getAmount() > ammoCount) {
                             i.setAmount(i.getAmount() - ammoCount);
                             ammoCount = 0;
-                        }else{
+                        } else {
                             ammoCount -= i.getAmount();
                             i.setAmount(0);
                         }
@@ -66,28 +73,35 @@ public class WeaponUtil {
                 }
             }
 
-            /*
-            TODO
-            Reload weapon with bullets.
-             */
+            //Set lore with the amount of ammo in the weapon.
+            int ammoInWeapon = magazineSize - ammoCount;
+            setAmmoInLore(weapon.getItemStack(), ammoInWeapon);
 
-        //Player has between 0 and magazine size ammo in his inventory.
+
+        //If player has no ammo in inventory.
         }else{
-            int ammoCount = 0;
-            for (ItemStack i : inv){
-                if (i != null){
-                    if (i.getType() == Material.ORANGE_TULIP){
-                        ammoCount += i.getAmount();
-                    }
-                }
-            }
-            inv.remove(Material.ORANGE_TULIP);
-
-            /*TODO
-            Reload weapon with bullets.
-             */
+            p.sendMessage("No ammo in Inventory.");
         }
+    }
+
+    //Set ammo of -weapon- to -ammoInWeapon
+    public static void setAmmoInLore(ItemStack weapon, int ammo){
+        ItemMeta meta = weapon.getItemMeta();
+        List<String> lore = new ArrayList<>();
+        lore.add("Ammo: " + ammo);
+        meta.setLore(lore);
+        weapon.setItemMeta(meta);
+    }
 
 
+    //Returns the amount of ammo in the weapon
+    public static int getAmmoFromLore(ItemStack weapon){
+        for (String line : weapon.getItemMeta().getLore()){
+            if (line.startsWith("Ammo:")){
+                String intString = line.replace("Ammo: ", "");
+                return Integer.parseInt(intString);
+            }
+        }
+        return 999;
     }
 }

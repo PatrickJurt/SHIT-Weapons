@@ -10,6 +10,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
+import org.bukkit.inventory.ItemStack;
 
 public class PlayerInteractListener implements Listener {
 
@@ -53,8 +54,15 @@ public class PlayerInteractListener implements Listener {
                     //If player has orange Dye in his hand
                     if (e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
 
-                        //Actually shoot the Bullet
-                        WeaponUtil.shootBullet(e.getPlayer());
+                        ItemStack weapon = e.getPlayer().getInventory().getItemInMainHand();
+                        int ammo = WeaponUtil.getAmmoFromLore(weapon);
+                        if (ammo > 0){
+                            //Actually shoot the Bullet
+                            WeaponUtil.shootBullet(e.getPlayer());
+
+                            //Remove 1 ammo from weapon
+                            WeaponUtil.setAmmoInLore(weapon, ammo - 1);
+                        }
 
                         //Cancel the block-braking or hitting.
                         e.setCancelled(true);

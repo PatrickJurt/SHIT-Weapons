@@ -29,17 +29,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Shoot and Projectile Hit&#10;Shoot arrow when dye in hand, remove arrow on hit">
-      <change afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SHIT_Weapons_jar.xml" afterDir="false" />
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Reload&#10;Ammo gets removed on DropEvent. Weapon does not get loaded yet. sill infinite ammo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/BulletUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/BulletUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606486682465</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Reload&#10;Ammo gets removed on DropEvent. Weapon does not get loaded yet. sill infinite ammo">
+      <created>1606506866037</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606506866037</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,7 +129,8 @@
     <MESSAGE value="Brainstorming P&#10;classes and attributes" />
     <MESSAGE value="Brainstorming P 1.0.2" />
     <MESSAGE value="Added Spread&#10;in BulletUtil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Spread&#10;in BulletUtil" />
+    <MESSAGE value="Reload&#10;Ammo gets removed on DropEvent. Weapon does not get loaded yet. sill infinite ammo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reload&#10;Ammo gets removed on DropEvent. Weapon does not get loaded yet. sill infinite ammo" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
@@ -154,11 +155,11 @@
     </state>
     <state x="314" y="23" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1606460471160" />
     <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606501935512" />
-    <state x="393" y="212" key="Vcs.Push.Dialog.v2" timestamp="1606486685352">
-      <screen x="0" y="0" width="1368" height="872" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606506867853">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605908051140" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606506867853" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606503903093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

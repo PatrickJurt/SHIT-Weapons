@@ -47,7 +47,6 @@ public class WeaponUtil {
 
     }
 
-
     public static void reloadWeapon(Player p, Item weapon){
 
         int magazineSize = 10;

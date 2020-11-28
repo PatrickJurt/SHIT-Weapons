@@ -25,6 +25,9 @@ public class PlayerDropListener implements Listener {
         Player p = e.getPlayer();
 
         if (e.getItemDrop().getItemStack().getType() == Material.ORANGE_DYE){
+
+            WeaponUtil.giveFreshWeaponALore(e.getItemDrop().getItemStack());
+
             //Add him to the reloading players, so the shooting in the Interact Event doesnt get called
             //Cause by dropping an item the interact event gets called. For whatever reason.
             //Get the player out of zoom-Mode

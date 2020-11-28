@@ -103,4 +103,11 @@ public class WeaponUtil {
         }
         return 999;
     }
+
+    public static void giveFreshWeaponALore(ItemStack i){
+        //If weapon doesn't have Lore yet. Fresh weapon
+        if (!(i.getItemMeta().hasLore())){
+            WeaponUtil.setAmmoInLore(i, 0);
+        }
+    }
 }

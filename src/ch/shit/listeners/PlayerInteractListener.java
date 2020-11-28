@@ -30,6 +30,9 @@ public class PlayerInteractListener implements Listener {
             //Only handle the event for main-hand.
             if (e.getHand() == EquipmentSlot.HAND){
                 if(e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE){
+
+                    WeaponUtil.getAmmoFromLore(e.getItem());
+
                     //Trigger the zoomEffect
                     PlayerUtil.toggleZoom(e.getPlayer());
                     e.setCancelled(true);
@@ -53,6 +56,8 @@ public class PlayerInteractListener implements Listener {
 
                     //If player has orange Dye in his hand
                     if (e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
+
+                        WeaponUtil.getAmmoFromLore(e.getItem());
 
                         ItemStack weapon = e.getPlayer().getInventory().getItemInMainHand();
                         int ammo = WeaponUtil.getAmmoFromLore(weapon);

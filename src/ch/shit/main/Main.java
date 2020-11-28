@@ -1,8 +1,6 @@
 package ch.shit.main;
 
-import ch.shit.listeners.PlayerDropListener;
-import ch.shit.listeners.PlayerInteractListener;
-import ch.shit.listeners.PlayerItemHeldListener;
+import ch.shit.listeners.*;
 import ch.shit.util.BulletUtil;
 import ch.shit.util.PlayerUtil;
 import ch.shit.util.WeaponUtil;
@@ -12,10 +10,11 @@ public class Main extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        new PlayerJoinListener(this);
         new PlayerInteractListener(this);
         new PlayerItemHeldListener(this);
         new PlayerDropListener(this);
-        //new ProjectileHitListener(this);
+        new ProjectileHitListener(this);
 
         new BulletUtil(this);
         new PlayerUtil(this);

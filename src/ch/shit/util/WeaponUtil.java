@@ -1,6 +1,9 @@
 package ch.shit.util;
 
 import ch.shit.main.Main;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Arrow;
@@ -109,5 +112,22 @@ public class WeaponUtil {
         if (!(i.getItemMeta().hasLore())){
             WeaponUtil.setAmmoInLore(i, 0);
         }
+    }
+
+    public static void makeActionbar(Player p, ItemStack weapon, int magazineSize){
+
+        int ammo = getAmmoFromLore(weapon);
+        double percentage = 100.0 * ammo / magazineSize;
+        int i = 0;
+        String msg = "§a";
+        for (i = 5; i <= percentage; i += 5){
+            msg += "█";
+        }
+        msg += "§4";
+        for(int j = i; j <= 100; j += 5){
+            msg += "█";
+        }
+        ChatColor.translateAlternateColorCodes('&', msg);
+        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
     }
 }

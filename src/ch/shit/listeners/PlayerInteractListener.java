@@ -70,6 +70,9 @@ public class PlayerInteractListener implements Listener {
 
                             //Remove 1 ammo from weapon
                             WeaponUtil.setAmmoInLore(weapon, ammo - 1);
+
+                            //Actionbar for ammodisplay
+                            WeaponUtil.makeActionbar(p, weapon, 10);
                         }
                     }
                 }

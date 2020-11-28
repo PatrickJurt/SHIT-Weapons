@@ -38,6 +38,8 @@ public class PlayerDropListener implements Listener {
             }
 
             WeaponUtil.reloadWeapon(e.getPlayer(), e.getItemDrop());
+
+            WeaponUtil.makeActionbar(p, e.getItemDrop().getItemStack(), 10);
         }
     }
 }

@@ -29,11 +29,15 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Reload and Shoot&#10;BugFix where getting a new weapon wouln't give it a itemmeta">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Shoot Bugfix&#10;Fixed a bug where the first arrow wouldn't shoot if you were reloading while looking at a block.">
+      <change afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerJoinListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +136,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606562976716</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Shoot Bugfix&#10;Fixed a bug where the first arrow wouldn't shoot if you were reloading while looking at a block.">
+      <created>1606574020622</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1606574020622</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -154,7 +165,8 @@
     <MESSAGE value="Reload&#10;Ammo gets removed on DropEvent. Weapon does not get loaded yet. sill infinite ammo" />
     <MESSAGE value="Reload and Shoot&#10;Reloading now reloades the correct amount of ammo. Shooting removes one ammo and can't shoot with less than 1 ammo." />
     <MESSAGE value="Reload and Shoot&#10;BugFix where getting a new weapon wouln't give it a itemmeta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reload and Shoot&#10;BugFix where getting a new weapon wouln't give it a itemmeta" />
+    <MESSAGE value="Shoot Bugfix&#10;Fixed a bug where the first arrow wouldn't shoot if you were reloading while looking at a block." />
+    <option name="LAST_COMMIT_MESSAGE" value="Shoot Bugfix&#10;Fixed a bug where the first arrow wouldn't shoot if you were reloading while looking at a block." />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
@@ -179,11 +191,11 @@
     </state>
     <state x="314" y="23" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1606460471160" />
     <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606501935512" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606562986087">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606574022899">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606562986087" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606574022899" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1606573043345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

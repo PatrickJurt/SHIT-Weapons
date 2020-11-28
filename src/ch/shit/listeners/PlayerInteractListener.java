@@ -60,10 +60,10 @@ public class PlayerInteractListener implements Listener {
                         //Cancel the block-braking or hitting.
                         e.setCancelled(true);
 
-                        WeaponUtil.getAmmoFromLore(e.getItem());
-
+                        //Get ammo in weapon.
                         ItemStack weapon = p.getInventory().getItemInMainHand();
                         int ammo = WeaponUtil.getAmmoFromLore(weapon);
+
                         if (ammo > 0) {
                             //Actually shoot the Bullet
                             WeaponUtil.shootBullet(p);

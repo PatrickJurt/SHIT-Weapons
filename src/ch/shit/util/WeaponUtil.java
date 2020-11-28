@@ -98,6 +98,13 @@ public class WeaponUtil {
 
     //Returns the amount of ammo in the weapon
     public static int getAmmoFromLore(ItemStack weapon){
+
+        //If Itemstack is bigger than 1, you should'nt shoot with it. :)
+        if (weapon.getAmount() > 1){
+            return 999;
+        }
+
+        //Get Line of lore where ammo is displayed. Remove "Ammo:" and return leftover int
         for (String line : weapon.getItemMeta().getLore()){
             if (line.startsWith("Ammo:")){
                 String intString = line.replace("Ammo: ", "");
@@ -117,16 +124,26 @@ public class WeaponUtil {
     public static void makeActionbar(Player p, ItemStack weapon, int magazineSize){
 
         int ammo = getAmmoFromLore(weapon);
+        if (ammo == 999){
+            return;
+        }
+
+        //Get percentage of ammo left in the weapon
         double percentage = 100.0 * ammo / magazineSize;
         int i = 0;
+
+        //First blocks are in green
         String msg = "§a";
         for (i = 5; i <= percentage; i += 5){
             msg += "█";
         }
+        //Rest should be red.
         msg += "§4";
         for(int j = i; j <= 100; j += 5){
             msg += "█";
         }
+
+        //print in the actionbar.
         ChatColor.translateAlternateColorCodes('&', msg);
         p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
     }

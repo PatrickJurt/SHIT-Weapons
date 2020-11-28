@@ -22,6 +22,7 @@ public class PlayerDropListener implements Listener {
 
     @EventHandler
     public void onPlayerDrop(PlayerDropItemEvent e){
+        e.setCancelled(true);
         Player p = e.getPlayer();
 
         if (e.getItemDrop().getItemStack().getType() == Material.ORANGE_DYE){
@@ -31,15 +32,12 @@ public class PlayerDropListener implements Listener {
             //Add him to the reloading players, so the shooting in the Interact Event doesnt get called
             //Cause by dropping an item the interact event gets called. For whatever reason.
             //Get the player out of zoom-Mode
-            PlayerUtil.reloadingPlayers.add(p);
+            PlayerUtil.playerLastReload.put(p, System.currentTimeMillis());
             if (PlayerUtil.zoomedPlayers.contains(e.getPlayer())){
                 PlayerUtil.toggleZoom(e.getPlayer());
             }
 
             WeaponUtil.reloadWeapon(e.getPlayer(), e.getItemDrop());
-
-
-            e.setCancelled(true);
         }
     }
 }

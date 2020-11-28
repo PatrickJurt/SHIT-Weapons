@@ -5,6 +5,7 @@ import ch.shit.util.PlayerUtil;
 import ch.shit.util.WeaponUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
@@ -45,36 +46,34 @@ public class PlayerInteractListener implements Listener {
     @EventHandler
     public void onLeftClick(PlayerInteractEvent e) {
 
-        //If player isn't reloading.
-        if (!(PlayerUtil.reloadingPlayers.contains(e.getPlayer()))){
+        if (e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK) {
 
-            //If player right-clicks
-            if (e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK) {
+            if (e.getHand() == EquipmentSlot.HAND) {
 
-                org.bukkit.entity.Player p = e.getPlayer();
-                if (e.getHand() == EquipmentSlot.HAND) {
+                Player p = e.getPlayer();
+                //If player has orange Dye in his hand
+                if (p.getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
 
-                    //If player has orange Dye in his hand
-                    if (e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
+                    //If player has reloaded just before and Event is called from dropevent
+                    if (System.currentTimeMillis() - PlayerUtil.playerLastReload.get(p) > 100) {
+
+                        //Cancel the block-braking or hitting.
+                        e.setCancelled(true);
 
                         WeaponUtil.getAmmoFromLore(e.getItem());
 
-                        ItemStack weapon = e.getPlayer().getInventory().getItemInMainHand();
+                        ItemStack weapon = p.getInventory().getItemInMainHand();
                         int ammo = WeaponUtil.getAmmoFromLore(weapon);
-                        if (ammo > 0){
+                        if (ammo > 0) {
                             //Actually shoot the Bullet
-                            WeaponUtil.shootBullet(e.getPlayer());
+                            WeaponUtil.shootBullet(p);
 
                             //Remove 1 ammo from weapon
                             WeaponUtil.setAmmoInLore(weapon, ammo - 1);
                         }
-
-                        //Cancel the block-braking or hitting.
-                        e.setCancelled(true);
                     }
                 }
             }
         }
-        PlayerUtil.reloadingPlayers.remove(e.getPlayer());
     }
 }

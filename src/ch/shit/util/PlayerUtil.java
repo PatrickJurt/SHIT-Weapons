@@ -6,14 +6,16 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PlayerUtil {
 
     private static Main plugin;
 
     public static List<Player> zoomedPlayers = new ArrayList<>();
-    public static List<Player> reloadingPlayers = new ArrayList<>();
+    public static Map<Player, Long> playerLastReload = new HashMap<>();
 
     public PlayerUtil(Main plugin){
         this.plugin = plugin;

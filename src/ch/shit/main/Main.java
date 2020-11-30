@@ -20,6 +20,9 @@ public class Main extends JavaPlugin {
         new PlayerUtil(this);
         new WeaponUtil(this);
 
+        getConfig().options().copyDefaults();
+        saveDefaultConfig();
+
         System.out.println("-----------------------------");
         System.out.println("S.H.I.T - Weapons enabled.");
         System.out.println("-----------------------------");

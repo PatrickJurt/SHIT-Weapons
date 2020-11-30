@@ -13,6 +13,7 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.metadata.FixedMetadataValue;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
@@ -26,12 +27,19 @@ public class WeaponUtil {
         this.plugin = plugin;
     }
 
+    static Plugin config = Main.getPlugin(Main.class);
+
     public static void shootBullet(Player p){
         //Adjust Projectile Position to be on eye-height.
         Location loc = p.getLocation();
         loc.add(0, 1.6, 0);
 
         Vector dir;
+
+        // todo Config
+        // pistol-spread = config.getConfig().getDouble("gun.pistol.spread");
+        // todo End-Config
+
 
         //Add spread to the direction-Vector if player is in zoom-Mode
         if (PlayerUtil.zoomedPlayers.contains(p)) {

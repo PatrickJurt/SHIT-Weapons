@@ -90,15 +90,19 @@ public class Main extends JavaPlugin {
 *    - type
 *    - zoom
 *
-* class ProjectileHitListener
-* * onProjectileHit()
+* --> surpressor
+*    - less spread
+*    - faster shooting
+*
+* --> grip
+*    - spread
+*    - move speed in scope
+*
+* --> cheek pad / stock?
+*    - attack speed?
 *
 *
-* class PlayerClickListener
-*  * onPlayerRightClick()
-*  * onPlayerLeftClick()
 *
-* class PlayerDropEvent
-*
-* */
+ */
+
 

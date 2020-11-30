@@ -21,15 +21,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Fixed a bug where having an Itemstack bigger than 1 of weapons in your hand throws an error message.&#10;&#10;Added some comments.">
-      <change afterPath="$PROJECT_DIR$/src/resources/config.yml" afterDir="false" />
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Just a better version :)">
+      <change afterPath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryOpenListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,12 +70,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1150748" />
   </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\sisis\Ideal\JavaProjects\SHIT-Weapons\src\resources" />
-    </key>
-  </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -194,11 +192,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605949012380" />
-    <state x="863" y="228" key="FileChooserDialogImpl" timestamp="1606768810465">
+    <state x="863" y="228" key="FileChooserDialogImpl" timestamp="1606502539291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="615" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1606460469040" />
-    <state x="863" y="228" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1606768810465" />
     <state x="863" y="228" key="FileChooserDialogImpl/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606502539291" />
     <state x="440" y="94" key="SettingsEditor" timestamp="1606501935512">
       <screen x="0" y="0" width="1920" height="1040" />

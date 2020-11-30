@@ -15,6 +15,7 @@ public class Main extends JavaPlugin {
         new PlayerItemHeldListener(this);
         new PlayerDropListener(this);
         new ProjectileHitListener(this);
+        new InventoryOpenListener(this);
 
         new BulletUtil(this);
         new PlayerUtil(this);

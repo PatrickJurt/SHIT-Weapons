@@ -4,6 +4,7 @@ import ch.shit.listeners.*;
 import ch.shit.util.BulletUtil;
 import ch.shit.util.PlayerUtil;
 import ch.shit.util.WeaponUtil;
+import org.bukkit.Material;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
@@ -12,8 +13,8 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         new PlayerJoinListener(this);
         new PlayerInteractListener(this);
-        new PlayerItemHeldListener(this);
-        new PlayerDropListener(this);
+        new PlayerItemHeldListener(this, getConfig());
+        new PlayerDropListener(this, getConfig());
         new ProjectileHitListener(this);
         new InventoryOpenListener(this);
         new PickupItemListener(this);
@@ -23,6 +24,8 @@ public class Main extends JavaPlugin {
         new BulletUtil(this);
         new PlayerUtil(this);
         new WeaponUtil(this);
+
+        loadWeapons();
 
         getConfig().options().copyDefaults();
         saveDefaultConfig();
@@ -38,6 +41,15 @@ public class Main extends JavaPlugin {
         System.out.println("-----------------------------");
         System.out.println("S.H.I.T - Weapons disabled.");
         System.out.println("-----------------------------");
+    }
+
+
+    public static void loadWeapons(){
+        WeaponUtil.weapons.put(Material.ORANGE_DYE, "pistol");
+        WeaponUtil.weapons.put(Material.YELLOW_DYE, "ar");
+
+        WeaponUtil.ammo.put("pistol", Material.ORANGE_TULIP);
+        WeaponUtil.ammo.put("ar", Material.DANDELION);
     }
 }
 

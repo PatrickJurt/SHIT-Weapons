@@ -1,12 +1,13 @@
 package ch.shit.listeners;
 
-import ch.shit.Weapon;
 import ch.shit.main.Main;
+import ch.shit.util.WeaponUtil;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
+import org.bukkit.inventory.ItemStack;
 
 public class PickupItemListener implements Listener {
 
@@ -20,9 +21,9 @@ public class PickupItemListener implements Listener {
 
     @EventHandler
     public void onItemPickup(EntityPickupItemEvent e){
-        if (e.getItem().getItemStack().getType() == Material.ORANGE_DYE ||
-        e.getItem().getItemStack().getType() == Material.YELLOW_DYE){
-            new Weapon(plugin, e.getItem().getItemStack());
+        ItemStack is = e.getItem().getItemStack();
+        if (WeaponUtil.weapons.containsKey(is.getType())){
+            WeaponUtil.setLore(is);
         }
     }
 }

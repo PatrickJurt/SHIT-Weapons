@@ -17,7 +17,9 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class WeaponUtil {
 
@@ -29,25 +31,23 @@ public class WeaponUtil {
 
     static Plugin config = Main.getPlugin(Main.class);
 
-    public static void shootBullet(Player p){
+    public static Map<Material, String> weapons = new HashMap<>();
+    public static Map<String, Material> ammo = new HashMap<>();
+
+    public static void shootBullet(Player p, String gun){
         //Adjust Projectile Position to be on eye-height.
         Location loc = p.getLocation();
         loc.add(0, 1.6, 0);
 
         Vector dir;
 
-        // todo Config
-        // pistol-spread = config.getConfig().getDouble("gun.pistol.spread");
-        // todo End-Config
-
-
         //Add spread to the direction-Vector if player is in zoom-Mode
         if (PlayerUtil.zoomedPlayers.contains(p)) {
-            dir = BulletUtil.addSpread(p.getLocation().getDirection(), 0.01);
+            dir = BulletUtil.addSpread(p.getLocation().getDirection(), config.getConfig().getDouble("gun." + gun + ".scopedSpread"));
 
         //Add spread to the direction-Vector not in zoom-Mode.
         }else {
-            dir = BulletUtil.addSpread(p.getLocation().getDirection(), 0.1);
+            dir = BulletUtil.addSpread(p.getLocation().getDirection(), config.getConfig().getDouble("gun." + gun + ".spread"));
         }
 
         //Spawn arrow, set vector, velocity, shooter and add Metadata
@@ -59,19 +59,21 @@ public class WeaponUtil {
     }
 
     public static void reloadWeapon(Player p, Item weapon){
+        ItemStack itemStack = weapon.getItemStack();
+        String gun = WeaponUtil.weapons.get(itemStack.getType());
 
-        int magazineSize = 10;
+        int magazineSize = config.getConfig().getInt("gun." + gun + ".magazineSize");
         Inventory inv = p.getInventory();
 
         //If the player has any ammo.
-        if (inv.contains(Material.ORANGE_TULIP, 1)){
+        if (inv.contains(WeaponUtil.ammo.get(gun), 1)){
             //ammoCount = How much ammo has to be reloaded.
             int ammoCount = magazineSize - getAmmoFromLore(weapon.getItemStack());
 
             //For every ItemStack in Inventory remove in total magazineSize amount of ammo.
             for (ItemStack i : inv) {
                 if (i != null && ammoCount != 0) {
-                    if (i.getType() == Material.ORANGE_TULIP) {
+                    if (i.getType() == WeaponUtil.ammo.get(gun)) {
                         if (i.getAmount() > ammoCount) {
                             i.setAmount(i.getAmount() - ammoCount);
                             ammoCount = 0;
@@ -97,7 +99,9 @@ public class WeaponUtil {
     //Set ammo of -weapon- to -ammoInWeapon
     public static void setAmmoInLore(ItemStack weapon, int ammo){
         ItemMeta meta = weapon.getItemMeta();
-        List<String> lore = new ArrayList<>();
+        List<String> lore = meta.getLore();
+
+        lore.remove(1);
         lore.add("Ammo: " + ammo);
         meta.setLore(lore);
         weapon.setItemMeta(meta);
@@ -130,7 +134,6 @@ public class WeaponUtil {
     }
 
     public static void makeActionbar(Player p, ItemStack weapon, int magazineSize){
-
         int ammo = getAmmoFromLore(weapon);
         if (ammo == 999){
             return;
@@ -154,5 +157,33 @@ public class WeaponUtil {
         //print in the actionbar.
         ChatColor.translateAlternateColorCodes('&', msg);
         p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
+    }
+
+    public static void setLore(ItemStack i){
+        ItemMeta meta = i.getItemMeta();
+
+        //Lore
+        List<String> lore = new ArrayList<>();
+        lore.add(getDisplayNameFromItem(i));
+        lore.add("Ammo: " + 0);
+        meta.setLore(lore);
+        i.setItemMeta(meta);
+    }
+
+    /*
+    Get display name of a weapon using the Material.
+     */
+    public static String getDisplayNameFromItem(ItemStack i){
+        for (Map.Entry<Material, String> entry : weapons.entrySet()) {
+            if (i.getType() == entry.getKey()) return config.getConfig().getString("gun." + entry.getValue() + ".displayName");
+        }
+        return "invalidWeapon";
+    }
+
+    public static boolean isWeapon(ItemStack i){
+        for (Map.Entry<Material, String> entry : weapons.entrySet()){
+            if (i.getType() == entry.getKey()) return true;
+        }
+        return false;
     }
 }

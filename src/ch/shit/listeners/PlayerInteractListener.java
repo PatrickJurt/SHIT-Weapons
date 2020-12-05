@@ -30,12 +30,13 @@ public class PlayerInteractListener implements Listener {
             //Event is triggered for both main and offhand.
             //Only handle the event for main-hand.
             if (e.getHand() == EquipmentSlot.HAND){
-                if(e.getPlayer().getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE){
+                if(WeaponUtil.weapons.containsKey(e.getPlayer().getInventory().getItemInMainHand().getType())){
+                    String gun = WeaponUtil.weapons.get(e.getPlayer().getInventory().getItemInMainHand().getType());
 
                     WeaponUtil.getAmmoFromLore(e.getItem());
 
                     //Trigger the zoomEffect
-                    PlayerUtil.toggleZoom(e.getPlayer());
+                    PlayerUtil.toggleZoom(e.getPlayer(), gun);
                     e.setCancelled(true);
                 }
             }
@@ -51,30 +52,39 @@ public class PlayerInteractListener implements Listener {
             if (e.getHand() == EquipmentSlot.HAND) {
 
                 Player p = e.getPlayer();
-                //If player has orange Dye in his hand
-                if (p.getInventory().getItemInMainHand().getType() == Material.ORANGE_DYE) {
+                //If player has a weapon in his hand
+                if (WeaponUtil.weapons.containsKey(p.getInventory().getItemInMainHand().getType())) {
+                    String gun = WeaponUtil.weapons.get(p.getInventory().getItemInMainHand().getType());
 
-                    //If player has reloaded just before and Event is called from dropevent
-                    //If during a reload of the plugin players stay on the server and try to shoot without reloading
-                    //There will be an Error-message.
-                    if (System.currentTimeMillis() - PlayerUtil.playerLastReload.get(p) > 100) {
+                    //If player has only one item in hand.
+                    if (p.getInventory().getItemInMainHand().getAmount() == 1) {
 
-                        //Cancel the block-braking or hitting.
-                        e.setCancelled(true);
+                        //If player has reloaded just before and Event is called from dropevent
+                        //If during a reload of the plugin players stay on the server and try to shoot without reloading
+                        //There will be an Error-message.
+                        if (System.currentTimeMillis() - PlayerUtil.playerLastReload.get(p) > 100) {
 
-                        //Get ammo in weapon.
-                        ItemStack weapon = p.getInventory().getItemInMainHand();
-                        int ammo = WeaponUtil.getAmmoFromLore(weapon);
+                            //Cancel the block-braking or hitting.
+                            e.setCancelled(true);
 
-                        if (ammo > 0) {
-                            //Actually shoot the Bullet
-                            WeaponUtil.shootBullet(p);
+                            //Get ammo in weapon.
+                            ItemStack weapon = p.getInventory().getItemInMainHand();
+                            int ammo = WeaponUtil.getAmmoFromLore(weapon);
 
-                            //Remove 1 ammo from weapon
-                            WeaponUtil.setAmmoInLore(weapon, ammo - 1);
+                            if (ammo > 0) {
+                                //Actually shoot the Bullet
+                                WeaponUtil.shootBullet(p, gun);
+
+                                //Remove 1 ammo from weapon
+                                WeaponUtil.setAmmoInLore(weapon, ammo - 1);
+                            }
+                            //Actionbar for ammodisplay
+                            WeaponUtil.makeActionbar(p, weapon, Main.getPlugin(Main.class).getConfig().getInt("gun." + gun + ".magazineSize"));
                         }
-                        //Actionbar for ammodisplay
-                        WeaponUtil.makeActionbar(p, weapon, 10);
+
+                    //Player has more than 1 weapon in the hand
+                    }else{
+                        p.sendMessage("You can't shoot more than 1 weapon at the same time.");
                     }
                 }
             }

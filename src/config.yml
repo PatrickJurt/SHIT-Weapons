@@ -1,12 +1,16 @@
 gun:
   pistol:
+    displayName: Pistol
     spread: 0.15
     scopedSpread: 0.05
+    scopedZoom: 1
     attackSpeed: 3
     magazineSize: 10
   ar:
+    displayName: Assault Rifle
     spread: 0.15
     scopedSpread: 0.01
+    scopedZoom: 3
     attackSpeed: 7
     magazineSize: 25
   shotgun:

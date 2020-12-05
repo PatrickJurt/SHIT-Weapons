@@ -27,6 +27,7 @@ public class InventoryClickListener implements Listener {
             Player p = (Player) e.getWhoClicked();
             if (!PlayerUtil.itemDroppingPlayers.contains(p)) {
                 PlayerUtil.itemDroppingPlayers.add(p);
+                return;
             }
         }
     }

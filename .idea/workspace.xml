@@ -29,10 +29,19 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Dropping Weapons&#10;A Player can now drop a weapon by hand by moving it out of the inventory. Q is still reload.">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Dropping Weapons&#10;Bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/Weapon.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607173084295</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Dropping Weapons&#10;Bugfix">
+      <created>1607173753908</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1607173753908</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +222,8 @@
     <MESSAGE value="Created InventoryOpenListener" />
     <MESSAGE value="some more brainstorming" />
     <MESSAGE value="Dropping Weapons&#10;A Player can now drop a weapon by hand by moving it out of the inventory. Q is still reload." />
-    <option name="LAST_COMMIT_MESSAGE" value="Dropping Weapons&#10;A Player can now drop a weapon by hand by moving it out of the inventory. Q is still reload." />
+    <MESSAGE value="Dropping Weapons&#10;Bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dropping Weapons&#10;Bugfix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
@@ -243,18 +260,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607168467919" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607173089323">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607173755643">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607173089323" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607173755643" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1606573043345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606573043345" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606503903093">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607180382095">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606503903093" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607180382095" />
   </component>
 </project>

@@ -22,10 +22,12 @@ public class PlayerDropListener implements Listener {
 
     @EventHandler
     public void onPlayerDrop(PlayerDropItemEvent e){
-        e.setCancelled(true);
         Player p = e.getPlayer();
 
-        if (e.getItemDrop().getItemStack().getType() == Material.ORANGE_DYE){
+        //If the item that gets dropped is a weapon
+        //And if the player isnt dropping the item by hand.
+        if (e.getItemDrop().getItemStack().getType() == Material.ORANGE_DYE && !PlayerUtil.itemDroppingPlayers.contains(p)){
+            e.setCancelled(true);
 
             WeaponUtil.giveFreshWeaponALore(e.getItemDrop().getItemStack());
 

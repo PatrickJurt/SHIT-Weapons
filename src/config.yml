@@ -1,0 +1,13 @@
+gun:
+  pistol:
+    spread: 0.15
+    scopedSpread: 0.05
+    attackSpeed: 3
+    magazineSize: 10
+  ar:
+    spread: 0.15
+    scopedSpread: 0.01
+    attackSpeed: 7
+    magazineSize: 25
+  shotgun:
+    spread: 0.2

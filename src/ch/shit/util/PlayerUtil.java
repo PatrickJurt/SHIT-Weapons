@@ -16,6 +16,7 @@ public class PlayerUtil {
 
     public static List<Player> zoomedPlayers = new ArrayList<>();
     public static Map<Player, Long> playerLastReload = new HashMap<>();
+    public static List<Player> itemDroppingPlayers = new ArrayList<>();
 
     public PlayerUtil(Main plugin){
         this.plugin = plugin;

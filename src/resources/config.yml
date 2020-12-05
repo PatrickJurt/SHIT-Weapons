@@ -1,7 +1,0 @@
-gun:
-  pistol:
-    spread: 0.1
-  ar:
-    spread: 0.15
-  shotgun:
-    spread: 0.2

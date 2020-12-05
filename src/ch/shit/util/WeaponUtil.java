@@ -24,30 +24,26 @@ import java.util.Map;
 public class WeaponUtil {
 
     private static Main plugin;
+    static Plugin config = Main.getPlugin(Main.class);
+    public static Map<Material, String> weapons = new HashMap<>();
+    public static Map<String, Material> ammo = new HashMap<>();
 
     public WeaponUtil(Main plugin){
         this.plugin = plugin;
     }
-
-    static Plugin config = Main.getPlugin(Main.class);
-
-    public static Map<Material, String> weapons = new HashMap<>();
-    public static Map<String, Material> ammo = new HashMap<>();
 
     public static void shootBullet(Player p, String gun){
         //Adjust Projectile Position to be on eye-height.
         Location loc = p.getLocation();
         loc.add(0, 1.6, 0);
 
-        Vector dir;
+        Vector dir = loc.getDirection();
 
-        //Add spread to the direction-Vector if player is in zoom-Mode
+        //Add spread to the direction-Vector
         if (PlayerUtil.zoomedPlayers.contains(p)) {
-            dir = BulletUtil.addSpread(p.getLocation().getDirection(), config.getConfig().getDouble("gun." + gun + ".scopedSpread"));
-
-        //Add spread to the direction-Vector not in zoom-Mode.
+            dir = BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".scopedSpread"));
         }else {
-            dir = BulletUtil.addSpread(p.getLocation().getDirection(), config.getConfig().getDouble("gun." + gun + ".spread"));
+            dir = BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".spread"));
         }
 
         //Spawn arrow, set vector, velocity, shooter and add Metadata
@@ -60,15 +56,15 @@ public class WeaponUtil {
 
     public static void reloadWeapon(Player p, Item weapon){
         ItemStack itemStack = weapon.getItemStack();
-        String gun = WeaponUtil.weapons.get(itemStack.getType());
+        String gun = weapons.get(itemStack.getType());
 
         int magazineSize = config.getConfig().getInt("gun." + gun + ".magazineSize");
         Inventory inv = p.getInventory();
 
         //If the player has any ammo.
-        if (inv.contains(WeaponUtil.ammo.get(gun), 1)){
+        if (inv.contains(ammo.get(gun), 1)){
             //ammoCount = How much ammo has to be reloaded.
-            int ammoCount = magazineSize - getAmmoFromLore(weapon.getItemStack());
+            int ammoCount = magazineSize - getAmmoFromLore(itemStack);
 
             //For every ItemStack in Inventory remove in total magazineSize amount of ammo.
             for (ItemStack i : inv) {
@@ -87,7 +83,7 @@ public class WeaponUtil {
 
             //Set lore with the amount of ammo in the weapon.
             int ammoInWeapon = magazineSize - ammoCount;
-            setAmmoInLore(weapon.getItemStack(), ammoInWeapon);
+            setAmmoInLore(itemStack, ammoInWeapon);
 
 
         //If player has no ammo in inventory.
@@ -126,16 +122,10 @@ public class WeaponUtil {
         return 999;
     }
 
-    public static void giveFreshWeaponALore(ItemStack i){
-        //If weapon doesn't have Lore yet. Fresh weapon
-        if (!(i.getItemMeta().hasLore())){
-            WeaponUtil.setAmmoInLore(i, 0);
-        }
-    }
-
     public static void makeActionbar(Player p, ItemStack weapon, int magazineSize){
         int ammo = getAmmoFromLore(weapon);
         if (ammo == 999){
+            p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent("Something's wrong, please contact someone!"));
             return;
         }
 
@@ -159,7 +149,7 @@ public class WeaponUtil {
         p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
     }
 
-    public static void setLore(ItemStack i){
+    public static void setInitialLore(ItemStack i){
         ItemMeta meta = i.getItemMeta();
 
         //Lore
@@ -178,12 +168,5 @@ public class WeaponUtil {
             if (i.getType() == entry.getKey()) return config.getConfig().getString("gun." + entry.getValue() + ".displayName");
         }
         return "invalidWeapon";
-    }
-
-    public static boolean isWeapon(ItemStack i){
-        for (Map.Entry<Material, String> entry : weapons.entrySet()){
-            if (i.getType() == entry.getKey()) return true;
-        }
-        return false;
     }
 }

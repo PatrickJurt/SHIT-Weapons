@@ -29,10 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Dropping Weapons&#10;Bugfix">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Config-Update&#10;Values now come from the Config and are not hard-coded.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/Weapon.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" afterDir="false" />
@@ -41,7 +39,6 @@
       <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607173753908</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Config-Update&#10;Values now come from the Config and are not hard-coded.">
+      <created>1607186921306</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1607186921306</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -223,7 +227,8 @@
     <MESSAGE value="some more brainstorming" />
     <MESSAGE value="Dropping Weapons&#10;A Player can now drop a weapon by hand by moving it out of the inventory. Q is still reload." />
     <MESSAGE value="Dropping Weapons&#10;Bugfix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dropping Weapons&#10;Bugfix" />
+    <MESSAGE value="Config-Update&#10;Values now come from the Config and are not hard-coded." />
+    <option name="LAST_COMMIT_MESSAGE" value="Config-Update&#10;Values now come from the Config and are not hard-coded." />
   </component>
   <component name="WindowStateProjectService">
     <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
@@ -260,11 +265,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607168467919" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607173755643">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607186922480">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607173755643" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607186922480" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1606573043345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

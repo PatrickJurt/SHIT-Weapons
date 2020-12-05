@@ -24,11 +24,7 @@ public class InventoryClickListener implements Listener {
         //If a player is clicking on the side of the inventory, put him in a list
         //If then a item is dropping, he just dragged it out of the inventory.
         if (e.getClickedInventory() == null){
-            Player p = (Player) e.getWhoClicked();
-            if (!PlayerUtil.itemDroppingPlayers.contains(p)) {
-                PlayerUtil.itemDroppingPlayers.add(p);
-                return;
-            }
+            PlayerUtil.itemDroppingPlayers.add((Player) e.getWhoClicked());
         }
     }
 }

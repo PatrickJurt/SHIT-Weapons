@@ -12,10 +12,15 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
+
+import java.util.Map;
 
 public class PlayerInteractListener implements Listener {
 
     private static Main plugin;
+    private static Plugin config = Main.getPlugin(Main.class);
+    private static Map<Material, String> weapons = WeaponUtil.weapons;
 
     public PlayerInteractListener(Main plugin){
         this.plugin = plugin;
@@ -25,15 +30,15 @@ public class PlayerInteractListener implements Listener {
 
     @EventHandler
     public void onRightClick(PlayerInteractEvent e) {
-
         if(e.getAction() == Action.RIGHT_CLICK_AIR || e.getAction() == Action.RIGHT_CLICK_BLOCK){
             //Event is triggered for both main and offhand.
             //Only handle the event for main-hand.
             if (e.getHand() == EquipmentSlot.HAND){
-                if(WeaponUtil.weapons.containsKey(e.getPlayer().getInventory().getItemInMainHand().getType())){
-                    String gun = WeaponUtil.weapons.get(e.getPlayer().getInventory().getItemInMainHand().getType());
 
-                    WeaponUtil.getAmmoFromLore(e.getItem());
+                //If Item in Hand is a Weapon
+                Material mat = e.getPlayer().getInventory().getItemInMainHand().getType();
+                if(weapons.containsKey(mat)){
+                    String gun = weapons.get(mat);
 
                     //Trigger the zoomEffect
                     PlayerUtil.toggleZoom(e.getPlayer(), gun);
@@ -46,20 +51,21 @@ public class PlayerInteractListener implements Listener {
 
     @EventHandler
     public void onLeftClick(PlayerInteractEvent e) {
-
         if (e.getAction() == Action.LEFT_CLICK_AIR || e.getAction() == Action.LEFT_CLICK_BLOCK) {
-
             if (e.getHand() == EquipmentSlot.HAND) {
 
                 Player p = e.getPlayer();
+                ItemStack itemStack = p.getInventory().getItemInMainHand();
+                Material mat = itemStack.getType();
+
                 //If player has a weapon in his hand
-                if (WeaponUtil.weapons.containsKey(p.getInventory().getItemInMainHand().getType())) {
-                    String gun = WeaponUtil.weapons.get(p.getInventory().getItemInMainHand().getType());
+                if (weapons.containsKey(mat)) {
+                    String gun = weapons.get(mat);
 
                     //If player has only one item in hand.
-                    if (p.getInventory().getItemInMainHand().getAmount() == 1) {
+                    if (itemStack.getAmount() == 1) {
 
-                        //If player has reloaded just before and Event is called from dropevent
+                        //If player has reloaded just before and Event is called from Drop-Event
                         //If during a reload of the plugin players stay on the server and try to shoot without reloading
                         //There will be an Error-message.
                         if (System.currentTimeMillis() - PlayerUtil.playerLastReload.get(p) > 100) {
@@ -68,21 +74,20 @@ public class PlayerInteractListener implements Listener {
                             e.setCancelled(true);
 
                             //Get ammo in weapon.
-                            ItemStack weapon = p.getInventory().getItemInMainHand();
-                            int ammo = WeaponUtil.getAmmoFromLore(weapon);
+                            int ammo = WeaponUtil.getAmmoFromLore(itemStack);
 
                             if (ammo > 0) {
                                 //Actually shoot the Bullet
                                 WeaponUtil.shootBullet(p, gun);
 
                                 //Remove 1 ammo from weapon
-                                WeaponUtil.setAmmoInLore(weapon, ammo - 1);
+                                WeaponUtil.setAmmoInLore(itemStack, ammo - 1);
                             }
-                            //Actionbar for ammodisplay
-                            WeaponUtil.makeActionbar(p, weapon, Main.getPlugin(Main.class).getConfig().getInt("gun." + gun + ".magazineSize"));
+                            //Actionbar for AmmoDisplay
+                            WeaponUtil.makeActionbar(p, itemStack, config.getConfig().getInt("gun." + gun + ".magazineSize"));
                         }
 
-                    //Player has more than 1 weapon in the hand
+                    //Player has more than 1 weapon in ItemSlot
                     }else{
                         p.sendMessage("You can't shoot more than 1 weapon at the same time.");
                     }

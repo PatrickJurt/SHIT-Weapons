@@ -3,7 +3,6 @@ package ch.shit.listeners;
 import ch.shit.main.Main;
 import ch.shit.util.WeaponUtil;
 import org.bukkit.Bukkit;
-import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityPickupItemEvent;
@@ -19,11 +18,12 @@ public class PickupItemListener implements Listener {
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
 
+    //On pickup get a Weapon its lore.
     @EventHandler
     public void onItemPickup(EntityPickupItemEvent e){
         ItemStack is = e.getItem().getItemStack();
-        if (WeaponUtil.weapons.containsKey(is.getType())){
-            WeaponUtil.setLore(is);
+        if (WeaponUtil.weapons.containsKey(is.getType()) && !is.getItemMeta().hasLore()){
+            WeaponUtil.setInitialLore(is);
         }
     }
 }

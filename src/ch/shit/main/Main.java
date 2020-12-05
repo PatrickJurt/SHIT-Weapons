@@ -13,8 +13,8 @@ public class Main extends JavaPlugin {
     public void onEnable() {
         new PlayerJoinListener(this);
         new PlayerInteractListener(this);
-        new PlayerItemHeldListener(this, getConfig());
-        new PlayerDropListener(this, getConfig());
+        new PlayerItemHeldListener(this);
+        new PlayerDropListener(this);
         new ProjectileHitListener(this);
         new InventoryOpenListener(this);
         new PickupItemListener(this);

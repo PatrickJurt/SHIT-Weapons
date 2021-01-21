@@ -6,6 +6,7 @@ gun:
     scopedZoom: 1
     attackSpeed: 3
     magazineSize: 10
+    soundRange: 4
   ar:
     displayName: Assault Rifle
     spread: 0.15

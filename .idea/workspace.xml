@@ -29,16 +29,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Config-Update&#10;Values now come from the Config and are not hard-coded.">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Better Code&#10;New Code = Better code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/InventoryClickListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PickupItemListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerDropListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerInteractListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/listeners/PlayerItemHeldListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/PlayerUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,6 +266,10 @@
     </state>
     <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607186922480" />
+    <state x="742" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1611222740460">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="742" y="254" key="VcsDiffUtil.ChangesDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1611222740460" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1606573043345">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

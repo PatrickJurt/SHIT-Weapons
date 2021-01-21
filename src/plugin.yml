@@ -2,3 +2,4 @@ main: ch.shit.main.Main
 version: 1.0
 name: Weapons
 api-version: 1.13
+description: does stuff

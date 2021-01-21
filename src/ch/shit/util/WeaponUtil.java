@@ -6,9 +6,11 @@ import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.Sound;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Item;
 import org.bukkit.entity.Player;
+import org.bukkit.entity.SpectralArrow;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -47,10 +49,12 @@ public class WeaponUtil {
         }
 
         //Spawn arrow, set vector, velocity, shooter and add Metadata
-        Arrow arrow = p.getWorld().spawn(loc, Arrow.class);
+        SpectralArrow arrow = p.getWorld().spawn(loc, SpectralArrow.class);
         arrow.setVelocity(dir.multiply(5));
         arrow.setShooter(p);
         arrow.setMetadata("Bullet", new FixedMetadataValue(plugin, "yes!"));
+
+        p.getWorld().playSound(p.getLocation(), Sound.ENTITY_CAT_HISS, config.getConfig().getInt("gun." + gun + ".soundRange"), 1);
 
     }
 

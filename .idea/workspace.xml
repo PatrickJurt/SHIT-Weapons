@@ -29,12 +29,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Better Code&#10;New Code = Better code">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Final Code">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +63,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Dev/Minecraft/localhost/plugins" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Java/spigot-1.17.jar" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.1150748" />
   </component>
@@ -77,7 +73,7 @@
       <recent name="C:\Users\hansl\IdeaProjects\SHIT-Weapons\src" />
     </key>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -194,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607186921306</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Final Code">
+      <created>1611226804150</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1611226804150</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Final Code">
+      <created>1611226835520</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1611226835520</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,59 +234,7 @@
     <MESSAGE value="Dropping Weapons&#10;A Player can now drop a weapon by hand by moving it out of the inventory. Q is still reload." />
     <MESSAGE value="Dropping Weapons&#10;Bugfix" />
     <MESSAGE value="Config-Update&#10;Values now come from the Config and are not hard-coded." />
-    <option name="LAST_COMMIT_MESSAGE" value="Config-Update&#10;Values now come from the Config and are not hard-coded." />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="94" key="#Project_Structure" timestamp="1605902761738">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605902761738" />
-    <state x="448" y="238" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1606377572095">
-      <screen x="0" y="0" width="1368" height="872" />
-    </state>
-    <state x="448" y="238" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1606377572095" />
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1607171699053">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607171699053" />
-    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1605949012380">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="310" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605949012380" />
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1607169838721">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607169838721" />
-    <state x="863" y="228" key="FileChooserDialogImpl" timestamp="1606502539291">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="615" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1606460469040" />
-    <state x="863" y="228" key="FileChooserDialogImpl/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606502539291" />
-    <state x="440" y="94" key="SettingsEditor" timestamp="1607169567441">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="314" y="23" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1606460471160" />
-    <state x="440" y="94" key="SettingsEditor/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607169567441" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1607168467919">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607168467919" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607186922480">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="393" y="212" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1606486685352" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607186922480" />
-    <state x="742" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1611222740460">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="742" y="254" key="VcsDiffUtil.ChangesDialog/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1611222740460" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1606573043345">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1606573043345" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607180382095">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.32.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1607180382095" />
+    <MESSAGE value="Final Code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Code" />
   </component>
 </project>

@@ -111,15 +111,14 @@ public class WeaponUtil {
     public static int getAmmoFromLore(ItemStack weapon){
 
         //If Itemstack is bigger than 1, you should'nt shoot with it. :)
-        if (weapon.getAmount() > 1){
-            return 999;
-        }
+        if (weapon.getAmount() == 1){
 
-        //Get Line of lore where ammo is displayed. Remove "Ammo:" and return leftover int
-        for (String line : Objects.requireNonNull(Objects.requireNonNull(weapon.getItemMeta()).getLore())){
-            if (line.startsWith("Ammo:")){
-                String intString = line.replace("Ammo: ", "");
-                return Integer.parseInt(intString);
+            //Get Line of lore where ammo is displayed. Remove "Ammo:" and return leftover int
+            for (String line : Objects.requireNonNull(Objects.requireNonNull(weapon.getItemMeta()).getLore())){
+                if (line.startsWith("Ammo:")){
+                    String intString = line.replace("Ammo: ", "");
+                    return Integer.parseInt(intString);
+                }
             }
         }
         return 999;

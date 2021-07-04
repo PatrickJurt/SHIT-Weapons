@@ -14,5 +14,6 @@ gun:
     scopedZoom: 3
     attackSpeed: 7
     magazineSize: 25
+    soundRange: 10
   shotgun:
     spread: 0.2

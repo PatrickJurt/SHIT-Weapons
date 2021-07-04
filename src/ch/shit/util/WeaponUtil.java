@@ -46,7 +46,7 @@ public class WeaponUtil {
         }
 
         //Spawn arrow, set vector, velocity, shooter and add Metadata
-        SpectralArrow arrow = p.getWorld().spawn(loc, SpectralArrow.class);
+        Arrow arrow = p.getWorld().spawn(loc, Arrow.class);
         arrow.setVelocity(dir.multiply(5));
         arrow.setShooter(p);
         arrow.setMetadata("Bullet", new FixedMetadataValue(plugin, "yes!"));

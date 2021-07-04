@@ -29,10 +29,13 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Fixed a bug where if you put a weapon in your active Slot the reload wouldn't work.&#10;changed function &quot;setInitialLore&quot;&#10;&#10;Fixed 12 Warnings in the code">
+    <list default="true" id="2be2a369-47d4-4ece-bc1b-04ed734e3974" name="Default Changelist" comment="Prettified code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/listeners/PickupItemListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/listeners/PickupItemListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/listeners/PlayerDropListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/listeners/PlayerDropListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/util/WeaponUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SHIT-Weapons/ch/shit/util/WeaponUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/shit/util/WeaponUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/config.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +232,14 @@
       <option name="project" value="LOCAL" />
       <updated>1625410516677</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Prettified code">
+      <created>1625413296138</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1625413296138</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -263,6 +273,7 @@
     <MESSAGE value="Updated on spigot 1.17.0" />
     <MESSAGE value="Fixed a bug where if you put a weapon in your active Slot the reload wouldn't work.&#10;changed function &quot;setInitialLore&quot;" />
     <MESSAGE value="Fixed a bug where if you put a weapon in your active Slot the reload wouldn't work.&#10;changed function &quot;setInitialLore&quot;&#10;&#10;Fixed 12 Warnings in the code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a bug where if you put a weapon in your active Slot the reload wouldn't work.&#10;changed function &quot;setInitialLore&quot;&#10;&#10;Fixed 12 Warnings in the code" />
+    <MESSAGE value="Prettified code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prettified code" />
   </component>
 </project>

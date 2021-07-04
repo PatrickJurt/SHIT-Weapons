@@ -15,5 +15,11 @@ gun:
     attackSpeed: 7
     magazineSize: 25
     soundRange: 10
-  shotgun:
-    spread: 0.2
+  sniper:
+    displayName: Sniper Rifle
+    spread: 0.25
+    scopedSpread: 0.001
+    scopedZoom: 25
+    attackSpeed: 0.5
+    magazineSize: 5
+    soundRange: 20

@@ -35,7 +35,6 @@ public class Main extends JavaPlugin {
         System.out.println("-----------------------------");
     }
 
-
     @Override
     public void onDisable(){
         System.out.println("-----------------------------");
@@ -47,9 +46,11 @@ public class Main extends JavaPlugin {
     public static void loadWeapons(){
         WeaponUtil.weapons.put(Material.ORANGE_DYE, "pistol");
         WeaponUtil.weapons.put(Material.YELLOW_DYE, "ar");
+        WeaponUtil.weapons.put(Material.WHITE_DYE, "sniper");
 
         WeaponUtil.ammo.put("pistol", Material.ORANGE_TULIP);
         WeaponUtil.ammo.put("ar", Material.DANDELION);
+        WeaponUtil.ammo.put("sniper", Material.WHITE_TULIP);
     }
 }
 

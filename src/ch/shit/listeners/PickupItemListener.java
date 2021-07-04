@@ -13,7 +13,7 @@ public class PickupItemListener implements Listener {
     private static Main plugin;
 
     public PickupItemListener(Main plugin){
-        this.plugin = plugin;
+        PickupItemListener.plugin = plugin;
 
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
@@ -21,9 +21,9 @@ public class PickupItemListener implements Listener {
     //On pickup get a Weapon its lore.
     @EventHandler
     public void onItemPickup(EntityPickupItemEvent e){
-        ItemStack is = e.getItem().getItemStack();
-        if (WeaponUtil.weapons.containsKey(is.getType()) && !is.getItemMeta().hasLore()){
-            WeaponUtil.setInitialLore(is);
+        ItemStack itemStack = e.getItem().getItemStack();
+        if (WeaponUtil.weapons.containsKey(itemStack.getType())){
+            WeaponUtil.setInitialLore(itemStack);
         }
     }
 }

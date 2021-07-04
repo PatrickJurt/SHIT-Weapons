@@ -18,10 +18,7 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.util.Vector;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class WeaponUtil {
 
@@ -31,7 +28,7 @@ public class WeaponUtil {
     public static Map<String, Material> ammo = new HashMap<>();
 
     public WeaponUtil(Main plugin){
-        this.plugin = plugin;
+        WeaponUtil.plugin = plugin;
     }
 
     public static void shootBullet(Player p, String gun){
@@ -43,9 +40,9 @@ public class WeaponUtil {
 
         //Add spread to the direction-Vector
         if (PlayerUtil.zoomedPlayers.contains(p)) {
-            dir = BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".scopedSpread"));
+            BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".scopedSpread"));
         }else {
-            dir = BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".spread"));
+            BulletUtil.addSpread(dir, config.getConfig().getDouble("gun." + gun + ".spread"));
         }
 
         //Spawn arrow, set vector, velocity, shooter and add Metadata
@@ -99,8 +96,10 @@ public class WeaponUtil {
     //Set ammo of -weapon- to -ammoInWeapon
     public static void setAmmoInLore(ItemStack weapon, int ammo){
         ItemMeta meta = weapon.getItemMeta();
+        assert meta != null;
         List<String> lore = meta.getLore();
 
+        assert lore != null;
         lore.remove(1);
         lore.add("Ammo: " + ammo);
         meta.setLore(lore);
@@ -117,7 +116,7 @@ public class WeaponUtil {
         }
 
         //Get Line of lore where ammo is displayed. Remove "Ammo:" and return leftover int
-        for (String line : weapon.getItemMeta().getLore()){
+        for (String line : Objects.requireNonNull(Objects.requireNonNull(weapon.getItemMeta()).getLore())){
             if (line.startsWith("Ammo:")){
                 String intString = line.replace("Ammo: ", "");
                 return Integer.parseInt(intString);
@@ -135,33 +134,39 @@ public class WeaponUtil {
 
         //Get percentage of ammo left in the weapon
         double percentage = 100.0 * ammo / magazineSize;
-        int i = 0;
+        int i;
 
         //First blocks are in green
-        String msg = "§a";
+        StringBuilder msg = new StringBuilder("§a");
         for (i = 5; i <= percentage; i += 5){
-            msg += "█";
+            msg.append("█");
         }
         //Rest should be red.
-        msg += "§4";
+        msg.append("§4");
         for(int j = i; j <= 100; j += 5){
-            msg += "█";
+            msg.append("█");
         }
 
         //print in the actionbar.
-        ChatColor.translateAlternateColorCodes('&', msg);
-        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg));
+        ChatColor.translateAlternateColorCodes('&', msg.toString());
+        p.spigot().sendMessage(ChatMessageType.ACTION_BAR, new TextComponent(msg.toString()));
     }
 
     public static void setInitialLore(ItemStack i){
-        ItemMeta meta = i.getItemMeta();
+        //If item already has a lore (is a weapon), it's ok.
+        //Otherwise create a new weapon from it.
+        if (!i.hasItemMeta()){
+            ItemMeta meta = i.getItemMeta();
 
-        //Lore
-        List<String> lore = new ArrayList<>();
-        lore.add(getDisplayNameFromItem(i));
-        lore.add("Ammo: " + 0);
-        meta.setLore(lore);
-        i.setItemMeta(meta);
+            //Lore
+            List<String> lore = new ArrayList<>();
+            lore.add(getDisplayNameFromItem(i));
+            lore.add("Ammo: " + 0);
+            //since the meta could throw an NullPointerException (apparently), we have to assert null
+            assert meta != null;
+            meta.setLore(lore);
+            i.setItemMeta(meta);
+        }
     }
 
     /*

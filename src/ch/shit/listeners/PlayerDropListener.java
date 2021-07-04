@@ -21,7 +21,7 @@ public class PlayerDropListener implements Listener {
     private static Map<Material, String> weapons = WeaponUtil.weapons;
 
     public PlayerDropListener(Main plugin){
-        this.plugin = plugin;
+        PlayerDropListener.plugin = plugin;
 
         Bukkit.getPluginManager().registerEvents(this, plugin);
     }
@@ -30,12 +30,13 @@ public class PlayerDropListener implements Listener {
     public void onPlayerDrop(PlayerDropItemEvent e){
         Player p = e.getPlayer();
         ItemStack itemStack = e.getItemDrop().getItemStack();
-        Material mat = itemStack.getType();
+        Material material = itemStack.getType();
 
         //If the item that gets dropped is a weapon
         //And if the player isn't dropping the item by hand.
-        if (weapons.containsKey(mat) && !PlayerUtil.itemDroppingPlayers.contains(p)){
+        if (weapons.containsKey(material) && !PlayerUtil.itemDroppingPlayers.contains(p)){
             e.setCancelled(true);
+            WeaponUtil.setInitialLore(itemStack);
 
             //Add player to the reloading players list, so the shooting in the Interact Event doesn't get called
             //Cause by dropping an item the interact event gets called. For whatever reason.
@@ -47,7 +48,7 @@ public class PlayerDropListener implements Listener {
 
             //Reload weapon and make actionbar.
             WeaponUtil.reloadWeapon(p, e.getItemDrop());
-            WeaponUtil.makeActionbar(p, itemStack, config.getConfig().getInt("gun." + weapons.get(mat) + ".magazineSize"));
+            WeaponUtil.makeActionbar(p, itemStack, config.getConfig().getInt("gun." + weapons.get(material) + ".magazineSize"));
         }
     }
 }
